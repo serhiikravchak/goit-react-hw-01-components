@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import {Item, Chip, Avatar, Name} from 'components/friendList/FriendListItem.styled'
 
 export default function FriendListItem({ isOnline, avatar, name }) {
     return (
-        <li class="item">
-            <span class="status"></span>
-            <img class="avatar" src={avatar} alt={name} width="48" />
-            <p class={name}></p>
-        </li>
+        <Item>
+            <Chip status={isOnline}></Chip>
+            <Avatar src={avatar} alt={name} width="48"></Avatar>
+            <Name>{name}</Name>
+        </Item>
     )
 }
 
