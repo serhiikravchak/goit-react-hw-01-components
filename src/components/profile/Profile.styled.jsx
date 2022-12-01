@@ -5,8 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 25px 0px 0px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
   background-color: #ffffff;
   box-shadow: 1px 1px 5px black;
   margin-top: 15px;
@@ -73,7 +72,11 @@ export const Item = styled.li`
   flex-direction: column;
   width: 100%;
   align-items: center;
-  border: solid 1px black;
+  // border: solid 1px black;
+
+  :first-child{
+    border-bottom-left-radius: 10px;
+  }
   `;
 
 export const Label = styled.span`
